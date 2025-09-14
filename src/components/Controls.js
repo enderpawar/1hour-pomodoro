@@ -1,4 +1,3 @@
-import react from 'react';
 export function Controls({ isActive, toggleTimer, adjustTime, reset }) {
   return (
     <>
