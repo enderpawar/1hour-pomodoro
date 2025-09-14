@@ -1,3 +1,17 @@
+#제목
+1시간 포모도로
+
+##설명
+공부할때 사용하려고 만든 1시간 포모도로입니다.
+
+##예시 사진
+집중모드
+<img width="3832" height="2049" alt="image" src="https://github.com/user-attachments/assets/064a3968-e383-425b-a292-14497911814e" />
+
+휴식모드
+<img width="3832" height="2049" alt="image" src="https://github.com/user-attachments/assets/1c3f123b-b2fa-4729-af49-24350831f7cb" />
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
