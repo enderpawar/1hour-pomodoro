@@ -72,7 +72,7 @@ function App() {
     return () => {clearInterval(interval);
       document.title=originalTitle;
     }
-  }, [isActive, seconds, currentSet, isResting]); // formatTime은 의존성 배열에서 제외할 수 있습니다.
+  }, [isActive, seconds, currentSet, isResting, formatTime]); // <-- formatTime을 여기에 추가했습니다.
 
   // --- 컨트롤 함수 ---
   const toggleTimer = () => {
