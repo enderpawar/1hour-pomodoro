@@ -72,7 +72,7 @@ function App() {
     return () => {clearInterval(interval);
       document.title=originalTitle;
     }
-  }, [isActive, seconds, currentSet, isResting, formatTime]); // <-- formatTime을 여기에 추가했습니다.
+  }, [isActive, seconds, currentSet, isResting, formatTime]);
 
   // --- 컨트롤 함수 ---
   const toggleTimer = () => {
