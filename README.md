@@ -5,8 +5,12 @@
 공부할때 사용하려고 만든 1시간 포모도로입니다.
 
 ##예시 사진
+집중모드
+<img width="3832" height="2049" alt="image" src="https://github.com/user-attachments/assets/064a3968-e383-425b-a292-14497911814e" />
 
-<img width="702" height="990" alt="image" src="https://github.com/user-attachments/assets/a5613ca4-8fdb-4121-b0b9-212b22aa0e7f" />
+휴식모드
+<img width="3832" height="2049" alt="image" src="https://github.com/user-attachments/assets/1c3f123b-b2fa-4729-af49-24350831f7cb" />
+
 
 # Getting Started with Create React App
 
