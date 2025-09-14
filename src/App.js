@@ -9,6 +9,7 @@ const REST_TIME = 900;  // 휴식 시간 (초)
 const TOTAL_SETS = 3;  // 총 세트 수
 
 function App() {
+  
   // --- 상태 관리 ---
   const [seconds, setSeconds] = useState(PLANK_TIME);
   const [isActive, setIsActive] = useState(false);
@@ -23,6 +24,18 @@ function App() {
   // --- 타이머 로직 (핵심) ---
   useEffect(() => {
     let interval = null;
+    const originalTitle = "포모도로 타이머";
+
+    // 타이머가 활성화 상태일 때만 제목을 변경합니다.
+    if (isActive) {
+      // 현재 모드(운동/휴식)와 시간을 조합하여 제목을 만듭니다.
+      const modeText = isResting ? '휴식' : '공부';
+      const newTitle = `[${formatTime()}] ${modeText}  - ${originalTitle}`;
+      document.title = newTitle;
+    } else {
+      // 타이머가 멈추면 원래 제목으로 되돌립니다.
+      document.title = originalTitle;
+    }
 
     if (isActive && seconds > 0) {
       interval = setInterval(() => {
@@ -49,7 +62,9 @@ function App() {
       }
     }
 
-    return () => clearInterval(interval);
+    return () => {clearInterval(interval);
+      document.title=originalTitle;
+    }
   }, [isActive, seconds, currentSet, isResting]);
 
   // --- 컨트롤 함수 ---
