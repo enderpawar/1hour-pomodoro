@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 import { CircularTimer } from './components/CircularTimer.js';
 import { Controls } from './components/Controls.js';
@@ -22,11 +22,12 @@ function App() {
   const finishSound = useRef(new Audio('/sounds/finish.mp3'));
 
   // formatTime 함수를 useEffect보다 위에 정의해야 합니다.
-  const formatTime = () => {
+  // useCallback을 사용하여 함수를 메모이징합니다.
+  const formatTime = useCallback(() => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
-  };
+  }, [seconds]);
 
   // --- 타이머 로직 (핵심) ---
   useEffect(() => {
